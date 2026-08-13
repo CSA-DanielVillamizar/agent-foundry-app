@@ -1,8 +1,8 @@
 # Agent Foundry App Plan
 
 **Product:** Agency Agents  
-**Repo:** `github:msitarzewski/agency-agents-app`  
-**Catalog:** `github:msitarzewski/agency-agents`  
+**Repo:** `github:CSA-DanielVillamizar/agent-foundry-app`  
+**Catalog:** `github:CSA-DanielVillamizar/agent-foundry`  
 **Stack:** Tauri 2, Rust, SvelteKit, Svelte 5, TypeScript  
 **License:** MIT
 
