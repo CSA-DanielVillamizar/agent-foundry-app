@@ -148,7 +148,7 @@ El ecosistema de herramientas de codificación con IA es fragmentado. Cada una t
 ## 📦 Instalación
 
 ### Descargas Oficiales
-Obtén la compilación para tu plataforma desde la [última versión](https://github.com/CSA-DanielVillamizar/agent-foundry-app//releases/tag/v0.3.0):
+Obtén la compilación para tu plataforma desde la [última versión](https://github.com/CSA-DanielVillamizar/agent-foundry-app/releases/tag/v0.3.0):
 
 - **macOS** (Apple Silicon & Intel) — .dmg firmado y notarizado, macOS 13+
 - **Linux** (x86_64) — .deb, .rpm o .AppImage portable
