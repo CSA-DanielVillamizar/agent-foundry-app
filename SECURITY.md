@@ -20,7 +20,7 @@ Thanks for taking the time to look. Agency Agents writes files into developer-to
 > [!IMPORTANT]
 > Please do not open a public GitHub issue for security reports.
 
-Email **msitarzewski@gmail.com** with:
+Email **danielvillamizara@gmail.com** with:
 
 - A clear description of the issue
 - Impact
