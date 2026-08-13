@@ -1,4 +1,4 @@
-# 🏭 Agent Foundry
+# 🏭 Agent Foundry App
 
 > Una aplicación nativa para descubrir, instalar y gestionar agentes de IA especializados
 
@@ -9,7 +9,7 @@
 
 ---
 
-## 📖 ¿Qué es Agent Foundry?
+## 📖 ¿Qué es Agent Foundry App?
 
 **Agent Foundry** es una aplicación nativa, de código abierto y con licencia MIT que te permite:
 
@@ -139,7 +139,7 @@ El ecosistema de herramientas de codificación con IA es fragmentado. Cada una t
 ## ❌ Lo Que NO Es
 
 - ❌ No es un runtime de agentes (instala en otras herramientas, no ejecuta)
-- ❌ No reemplaza el repositorio original de agency-agents
+- ❌ No reemplaza el repositorio original de agent-foundry
 - ❌ No es un producto de telemetría (sin analytics, tracking ni cuentas requeridas)
 - ❌ No es un puente de comandos shell
 
