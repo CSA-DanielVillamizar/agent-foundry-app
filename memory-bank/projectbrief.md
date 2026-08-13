@@ -1,16 +1,16 @@
-# Project Brief — Agency Agents
+# Project Brief — Agent Foundry
 
-**Product**: Agency Agents
-**Bundle ID**: `com.zerologic.agency-agents-app`
-**Repo**: github:msitarzewski/agency-agents-app
-**Author**: Michael Sitarzewski / Zerologic
+**Product**: Agent Foundry
+**Bundle ID**: `com.agent-foundry-app`
+**Repo**: github:CSA-DanielVillamizar/agent-foundry-app
+**Author**: Daniel Villamizar 
 **License**: MIT · No telemetry · No accounts
 
 ## One-liner
 
 A native macOS app store for AI agents. Browse, search, install, and **track** the
 **210** specialized agent personas (across 16 categories) from
-[`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents)
+[`CSA-DanielVillamizar/agent-foundry`](https://github.com/CSA-DanielVillamizar/agent-foundry)
 across every AI coding tool you use (Claude Code, Cursor, Codex, Gemini CLI, Copilot,
 Windsurf, Aider, opencode, qwen, openclaw, antigravity).
 (The repo also ships NEXUS playbooks + workflow examples — docs, not agents — a candidate
@@ -18,7 +18,7 @@ for a future "Playbooks" section.)
 
 ## Thesis
 
-This app is to the **agency-agents** repo what **brew-browser** is to **Homebrew**:
+This app is to the **agent-foundry** repo what **brew-browser** is to **Homebrew**:
 a thin, respectful native GUI over a CLI/content catalog. We forked brew-browser
 structurally (Tauri 2 + Svelte 5 + Rust) and re-pointed the domain layer from
 `brew` packages to AI agents.
