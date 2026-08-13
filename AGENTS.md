@@ -1,7 +1,10 @@
 # AGENTS.md
 
-**Version**: 2.2 (2025-03-04) | **Compatibility**: Claude, Cursor, Copilot, Cline, Aider, all AGENTS.md-compatible tools
-**Status**: Canonical single-file guide for AI-assisted development
+| Field | Value |
+|---|---|
+| **Version** | 2.2 (2025-03-04) |
+| **Compatibility** | Claude, Cursor, Copilot, Cline, Aider, all AGENTS.md-compatible tools |
+| **Status** | Canonical single-file guide for AI-assisted development |
 
 ---
 
@@ -22,6 +25,9 @@
 ## 1. Compliance & Core Rules
 
 ### Startup Compliance (Output Every Session)
+
+> [!IMPORTANT]
+> Output this exact block at the start of every session.
 
 ```
 COMPLIANCE CONFIRMED: Reuse over creation
@@ -44,6 +50,9 @@ COMPLIANCE CONFIRMED: Reuse over creation
 
 ### Reuse Validation Checklist (Before Creating Files)
 
+> [!TIP]
+> Complete this checklist before creating any new file.
+
 ```markdown
 - [ ] Searched: [search terms] → found: [list files]
 - [ ] Analyzed extension:
@@ -54,6 +63,9 @@ COMPLIANCE CONFIRMED: Reuse over creation
 ```
 
 ### Non-Negotiables
+
+> [!WARNING]
+> These are mandatory constraints.
 
 - **Approval Gates**: No file changes without explicit user approval
 - **Citations**: Always `file:line` for code, `file.md#Section` for Memory Bank
@@ -108,6 +120,9 @@ Append-only JSONL format:
 ```
 
 ### Compaction Protocol (Mid-Session Context Preservation)
+
+> [!IMPORTANT]
+> Compaction can happen without notice; persistence must be continuous.
 
 Compaction (context compression) can happen at any time — triggered by the system automatically, by the user via `/compact`, or by platform-level context management. **The agent does not control compaction timing and may not get advance notice.** Therefore, state persistence must be continuous, not deferred to a pre-compaction moment.
 
@@ -192,8 +207,10 @@ memory-bank/
 
 ### Read vs Write Paths
 
-**Read** (frequent): Session startup, before arch decisions, when uncertain, investigating issues
-**Write** (infrequent, requires approval): After major features, pattern discovery, arch decisions, milestone completion, user requests
+| Path | Usage |
+|---|---|
+| **Read** (frequent) | Session startup, before arch decisions, when uncertain, investigating issues |
+| **Write** (infrequent, requires approval) | After major features, pattern discovery, arch decisions, milestone completion, user requests |
 
 ---
 
@@ -214,7 +231,9 @@ PLAN [approve] → BUILD → DIFF → QA [pass] → APPROVAL [approve] → APPLY
 
 ### PLAN
 
-**In**: Task contract + MB context | **Out**: Implementation plan | **Exit**: User approves
+| Input | Output | Exit Condition |
+|---|---|---|
+| Task contract + MB context | Implementation plan | User approves |
 
 **Required Content**:
 ```markdown
@@ -247,7 +266,9 @@ PLAN [approve] → BUILD → DIFF → QA [pass] → APPROVAL [approve] → APPLY
 
 ### BUILD
 
-**In**: Approved plan | **Out**: Proposed diff (NOT APPLIED) | **Exit**: All changes complete, diff generated
+| Input | Output | Exit Condition |
+|---|---|---|
+| Approved plan | Proposed diff (NOT APPLIED) | All changes complete, diff generated |
 
 **Substate**: Set to `CODING`
 
@@ -280,7 +301,9 @@ PLAN [approve] → BUILD → DIFF → QA [pass] → APPROVAL [approve] → APPLY
 
 ### DIFF
 
-**In**: BUILD complete | **Out**: Rationale + diff | **Exit**: Ready for QA
+| Input | Output | Exit Condition |
+|---|---|---|
+| BUILD complete | Rationale + diff | Ready for QA |
 
 **Present**:
 ```markdown
@@ -313,7 +336,9 @@ tests/test.ext    | 200 +++++++++++++++++++++++++++
 
 ### QA
 
-**In**: DIFF complete | **Out**: Structured test results | **Exit**: Tests pass OR user waiver
+| Input | Output | Exit Condition |
+|---|---|---|
+| DIFF complete | Structured test results | Tests pass OR user waiver |
 
 **Substate**: Set to `RUNNING`
 
@@ -350,7 +375,9 @@ tests/test.ext    | 200 +++++++++++++++++++++++++++
 
 ### APPROVAL (HUMAN GATE)
 
-**In**: QA passed | **Out**: User decision | **Exit**: User approves explicitly
+| Input | Output | Exit Condition |
+|---|---|---|
+| QA passed | User decision | User approves explicitly |
 
 **Present**:
 ```markdown
@@ -396,7 +423,9 @@ Code changes complete. Ready for review.
 
 ### APPLY
 
-**In**: User approved | **Out**: Changes applied or rollback | **Exit**: Applied successfully OR rolled back
+| Input | Output | Exit Condition |
+|---|---|---|
+| User approved | Changes applied or rollback | Applied successfully OR rolled back |
 
 **Actions**:
 1. Apply all proposed changes to sandbox branch
@@ -437,7 +466,9 @@ Returning to BUILD.
 
 ### DOCS
 
-**In**: APPLY succeeded + user approved code | **Out**: Task docs, MB updates | **Exit**: All docs complete
+| Input | Output | Exit Condition |
+|---|---|---|
+| APPLY succeeded + user approved code | Task docs, MB updates | All docs complete |
 
 **CRITICAL**: Only enter after user approved code changes (from APPROVAL state)
 
@@ -657,6 +688,9 @@ Test fixtures and test mocks are acceptable. Production fake data is never accep
 
 ### Security Review (Part of APPROVAL State)
 
+> [!IMPORTANT]
+> Complete this checklist before leaving APPROVAL.
+
 **Checklist**:
 - [ ] **Auth/Authz**: No hardcoded creds | Auth checked before sensitive ops | Authz at boundaries | Session mgmt follows patterns
 - [ ] **Data Handling**: Input validation on external data | Output encoding prevents injection | Sensitive data encrypted (rest/transit if applicable)
@@ -678,6 +712,9 @@ If any item fails, address before APPROVAL state.
 **Quality**: Deterministic (no flaky tests) | Independent (no shared state) | Fast (optimize slow tests) | Maintainable (clear, readable)
 
 ### Documentation Standards
+
+> [!NOTE]
+> Documentation updates in Memory Bank require approval per rules below.
 
 **Files Requiring Approval Before Creation**:
 - Any `memory-bank/tasks/*/` files (task docs)
@@ -982,10 +1019,12 @@ Stuck? → Cycles ≥3?
 
 ### State Transitions
 
-`PLAN [user approves] → BUILD → DIFF → QA [pass] → APPROVAL [user approves] → APPLY → DOCS`
+```
+PLAN [user approves] → BUILD → DIFF → QA [pass] → APPROVAL [user approves] → APPLY → DOCS
 
-Iterations on failure: `BUILD ← DIFF ← QA ← APPROVAL`
-Major changes: Return to `PLAN`
+Iterations on failure: BUILD ← DIFF ← QA ← APPROVAL
+Major changes: Return to PLAN
+```
 
 ### Critical Rules
 
