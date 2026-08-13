@@ -1,4 +1,4 @@
-# Agency Agents Philosophy
+# Agent Foundry Philosophy
 
 Agency Agents exists because useful AI-agent catalogs should be easy to inspect, install, and maintain without hiding what is being written to a developer's machine.
 
@@ -13,7 +13,7 @@ The app is intentionally:
 
 ## 1. The Catalog Remains The Source
 
-The app does not replace the [`agency-agents`](https://github.com/msitarzewski/agency-agents) repo. It gives that repo a native app surface.
+The app does not replace the [`agent-foundry`](https://github.com/CSA-DanielVillamizar/agent-foundry) repo. It gives that repo a native app surface.
 
 The catalog source is either bundled, managed locally, or chosen by the user. Agent source remains plain Markdown. Tool-specific outputs are deterministic renders of that source.
 
