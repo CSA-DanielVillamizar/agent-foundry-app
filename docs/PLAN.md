@@ -1,4 +1,4 @@
-# Agency Agents App Plan
+# Agent Foundry App Plan
 
 **Product:** Agency Agents  
 **Repo:** `github:msitarzewski/agency-agents-app`  
@@ -8,7 +8,7 @@
 
 ## Vision
 
-Ship a native app for browsing, installing, and tracking the `agency-agents` catalog across AI coding tools.
+Ship a native app for browsing, installing, and tracking the `agent-foundry` catalog across AI coding tools.
 
 The app should answer three questions clearly:
 
