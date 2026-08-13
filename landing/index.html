@@ -14,7 +14,7 @@
   <!-- Primary meta -->
   <title>Agency Agents — a native installer for AI agents (Tauri + Svelte)</title>
   <meta name="description" content="Browse, install, and track AI agent personas across Claude Code, Codex, Cursor, Gemini CLI, Qwen, opencode, Copilot, and Osaurus. Full source. MIT licensed. Local-first, no telemetry, no accounts.">
-  <meta name="author" content="Michael Sitarzewski">
+  <meta name="author" content="Daniel Villamizar">
   <meta name="keywords" content="AI agents, agent personas, Claude Code, Codex, Cursor, Gemini CLI, Qwen, opencode, GitHub Copilot, Osaurus, Tauri, Svelte, Rust, native, MIT, open source, desktop app">
 
   <!-- Favicons & app icons -->
@@ -23,7 +23,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-title" content="Agency Agents">
-  <meta name="application-name" content="Agency Agents">
+  <meta name="application-name" content="Agent Foundry App">
   <meta name="msapplication-TileColor" content="#0a0d0f">
 
   <!-- PWA manifest -->
@@ -44,8 +44,8 @@
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@msitarzewski">
-  <meta name="twitter:creator" content="@msitarzewski">
+  <meta name="twitter:site" content="@CSA-DanielVillamizar">
+  <meta name="twitter:creator" content="@CSA-DanielVillamizar">
   <meta name="twitter:url" content="https://agencyagents.app/">
   <meta name="twitter:title" content="Agency Agents — a native installer for AI agents">
   <meta name="twitter:description" content="Browse, install, and track AI agent personas across the AI coding tools you actually use. Full source. MIT licensed. No telemetry, no accounts.">
@@ -63,13 +63,13 @@
     "applicationSubCategory": "AI Agent Manager",
     "operatingSystem": "macOS 13+, Windows, Linux",
     "url": "https://agencyagents.app/",
-    "downloadUrl": "https://github.com/msitarzewski/agency-agents-app/releases/latest",
+    "downloadUrl": "https://github.com/CSA-DanielVillamizar/agent-foundry-app/releases/latest",
     "softwareVersion": "0.2.0",
     "license": "https://opensource.org/licenses/MIT",
     "author": {
       "@type": "Person",
-      "name": "Michael Sitarzewski",
-      "url": "https://github.com/msitarzewski"
+      "name": "Daniel Villamizar",
+      "url": "https://github.com/CSA-DanielVillamizar"
     },
     "offers": {
       "@type": "Offer",
@@ -86,13 +86,13 @@
 
   <header class="hero">
     <div class="hero-inner">
-      <img src="/agency-agents.png" alt="Agency Agents icon" class="hero-icon" width="160" height="160">
+      <img src="/agent-foundry-app.png" alt="Agent Foundry App icon" class="hero-icon" width="160" height="160">
       <h1>Agency Agents</h1>
       <p class="tagline">A native installer for AI agents.</p>
       <p class="sub">Browse the agent catalog by division and role. Inspect a persona before you install it. Deploy deterministic renders into <strong>Claude Code, Codex, Cursor, Gemini CLI, Qwen, opencode, Copilot, and Osaurus</strong> — then track what the app wrote, detect drift, update, or back it out. A small, fast <strong>Tauri 2</strong> app (Rust + Svelte 5). The local install database your AI tools don't share.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://github.com/msitarzewski/agency-agents-app/releases/latest">Download</a>
-        <a class="btn btn-secondary" href="https://github.com/msitarzewski/agency-agents-app">Source on GitHub</a>
+        <a class="btn btn-primary" href="https://github.com/CSA-DanielVillamizar/agent-foundry-app/releases/latest">Download</a>
+        <a class="btn btn-secondary" href="https://github.com/CSA-DanielVillamizar/agent-foundry-app">Source on GitHub</a>
       </div>
       <p class="small-note">macOS 13+ · Windows · Linux · Apple Silicon &amp; Intel · MIT · no telemetry, no accounts</p>
     </div>
@@ -104,7 +104,7 @@
       <figure class="hero-shot">
         <picture>
           <source srcset="/screenshots/dashboard-dark.png" media="(prefers-color-scheme: dark)">
-          <img src="/screenshots/dashboard-light.png" alt="Agency Agents — Dashboard: 232 agents available, 246 installed, install-health donut, coverage by tool, per-tool cross-tool coverage donuts, and the catalog-by-division bar." loading="lazy">
+          <img src="/screenshots/dashboard-light.png" alt="Agent Foundry — Dashboard: 232 agents available, 246 installed, install-health donut, coverage by tool, per-tool cross-tool coverage donuts, and the catalog-by-division bar." loading="lazy">
         </picture>
         <figcaption>The Dashboard — install health, cross-tool coverage, and the catalog by division.</figcaption>
       </figure>
@@ -201,7 +201,7 @@
 
     <section class="section section-bordered">
       <h2>Get it</h2>
-      <p><strong>Direct download (recommended):</strong> grab the build for your platform from the <a href="https://github.com/msitarzewski/agency-agents-app/releases/latest">latest release</a>.</p>
+      <p><strong>Direct download (recommended):</strong> grab the build for your platform from the <a href="https://github.com/CSA-DanielVillamizar/agent-foundry-app/releases/latest">latest release</a>.</p>
       <p><strong>Which download?</strong></p>
       <ul class="posture">
         <li><strong>Apple Silicon (M-series), macOS 13+.</strong> <code>Agency Agents_&lt;version&gt;_aarch64.dmg</code> — signed &amp; notarized.</li>
@@ -214,7 +214,7 @@
 brew install --cask agency-agents</code></pre>
       <p class="small-note">Installs the signed &amp; notarized <code>.dmg</code> (Apple Silicon or Intel, auto-selected). Upgrade with <code>brew upgrade --cask agency-agents</code>.</p>
       <p>Or build it yourself from source:</p>
-      <pre><code>git clone https://github.com/msitarzewski/agency-agents-app
+      <pre><code>git clone https://github.com/CSA-DanielVillamizar/agent-foundry-app
 cd agency-agents-app
 npm install
 npm run tauri build      # bundles for your platform in src-tauri/target/release/bundle/</code></pre>
@@ -226,15 +226,15 @@ npm run tauri build      # bundles for your platform in src-tauri/target/release
   <footer>
     <div class="footer-inner">
       <p>
-        <a href="https://github.com/msitarzewski/agency-agents-app">Source</a> ·
-        <a href="https://github.com/msitarzewski/agency-agents-app/blob/main/LICENSE">MIT License</a> ·
-        <a href="https://github.com/msitarzewski/agency-agents-app/blob/main/SECURITY.md">Security</a> ·
-        <a href="https://github.com/msitarzewski/agency-agents-app/blob/main/CONTRIBUTING.md">Contributing</a> ·
-        <a href="https://github.com/sponsors/msitarzewski">♥ Sponsor</a>
+        <a href="https://github.com/CSA-DanielVillamizar/agent-foundry-app">Source</a> ·
+        <a href="https://github.com/CSA-DanielVillamizar/agent-foundry-app/blob/main/LICENSE">MIT License</a> ·
+        <a href="https://github.com/CSA-DanielVillamizar/agent-foundry-app/blob/main/SECURITY.md">Security</a> ·
+        <a href="https://github.com/CSA-DanielVillamizar/agent-foundry-app/blob/main/CONTRIBUTING.md">Contributing</a> ·
+        <a href="https://github.com/sponsors/CSA-DanielVillamizar">♥ Sponsor</a>
       </p>
-      <p class="copy">A native control surface for the <a href="https://github.com/msitarzewski/agency-agents">agency-agents</a> catalog, which does all the actual curation &mdash; and where this app's transforms (now including Osaurus) and the shared <code>tools.json</code> tool manifest are contributed first.</p>
-      <p class="copy">Built with ♥ by <a href="https://github.com/msitarzewski/agency-agents">Agency Agents</a> and <a href="https://claude.com/claude-code">Claude</a>, by the creator of Agency Agents.</p>
-      <p class="copy">© 2026 Michael Sitarzewski.</p>
+      <p class="copy">A native control surface for the <a href="https://github.com/CSA-DanielVillamizar/agent-foundry">agent-foundry</a> catalog, which does all the actual curation &mdash; and where this app's transforms (now including Osaurus) and the shared <code>tools.json</code> tool manifest are contributed first.</p>
+      <p class="copy">Built with ♥ by <a href="https://github.com/CSA-DanielVillamizar/agent-foundry">Agent Foundry</a> and <a href="https://claude.com/claude-code">Claude</a>, by the creator of Agency Agents.</p>
+      <p class="copy">© 2026 Daniel Villamizar.</p>
     </div>
   </footer>
 
